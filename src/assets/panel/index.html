@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
@@ -13,15 +13,16 @@
 </head>
 
 <body>
+    <button type="button" id="langToggle" style="position:fixed; top:10px; left:10px; z-index:999;" class="button">EN</button>
     <h1>
-        <img class="icon" src="/favicon.ico" alt="PbP Logo"> PbP Panel <span id="panel-version"
+        <img class="icon" src="/favicon.ico" alt="PbP Logo"> <span data-i18n="panelTitle">پنل PbP</span> <span id="panel-version"
             style="font-size: smaller;">
             v__VERSION__
         </span>
     </h1>
 
     <div class="form-container container" id="quickSettingsContainer">
-        <h2><span class="material-symbols-rounded">bolt</span> Quick Settings</h2>
+        <h2><span class="material-symbols-rounded">bolt</span> <span data-i18n="quickSettings">تنظیمات سریع</span></h2>
         <div class="section">
             <p style="margin: 0 0 12px;">
                 📱 برای گوشی: از تب <b>Subscriptions</b> لینک <b>Normal</b> یا <b>Fragment</b> رو کپی و توی اپلیکیشن کلاینتت (v2rayNG, Streisand و...) وارد کن.<br>
@@ -52,11 +53,11 @@
     </div>
 
     <div class="form-container container">
-        <h2><span class="material-symbols-rounded">settings</span> Settings</h2>
+        <h2><span class="material-symbols-rounded">settings</span> <span data-i18n="settings">تنظیمات</span></h2>
         <form id="configForm" class="configForm" onsubmit="updateSettings(event)">
             <details>
                 <summary>
-                    <h3>Common
+                    <h3><span data-i18n="common">عمومی</span>
                         <a href="https://bia-pain-bache.github.io/BPB-Worker-Panel/configuration/common/"
                             target="_blank" title="Help">
                             <span class="material-symbols-rounded">info</span>
@@ -119,7 +120,7 @@
             </details>
             <details class="details">
                 <summary>
-                    <h3>VLESS - Trojan
+                    <h3><span data-i18n="vlessTrojan">VLESS - Trojan</span>
                         <a href="https://bia-pain-bache.github.io/BPB-Worker-Panel/configuration/vless-trojan/"
                             target="_blank" title="Help">
                             <span class="material-symbols-rounded">info</span>
@@ -310,7 +311,7 @@
             </details>
             <details>
                 <summary>
-                    <h3>Xray Fragment
+                    <h3><span data-i18n="fragment">فرگمنت Xray</span>
                         <a href="https://bia-pain-bache.github.io/BPB-Worker-Panel/configuration/fragment/"
                             target="_blank" title="Help">
                             <span class="material-symbols-rounded">info</span>
@@ -372,7 +373,7 @@
             </details>
             <details>
                 <summary>
-                    <h3>External Raw Configs
+                    <h3><span data-i18n="externalRaw">کانفیگ خام خارجی</span>
                         <a href="https://bia-pain-bache.github.io/BPB-Worker-Panel/configuration/external-configs/"
                             target="_blank" title="Help">
                             <span class="material-symbols-rounded">info</span>
@@ -396,7 +397,7 @@
             </details>
             <details>
                 <summary>
-                    <h3>Warp General
+                    <h3><span data-i18n="warpGeneral">وارپ عمومی</span>
                         <a href="https://bia-pain-bache.github.io/BPB-Worker-Panel/configuration/warp/" target="_blank"
                             title="Help">
                             <span class="material-symbols-rounded">info</span>
@@ -440,7 +441,7 @@
             </details>
             <details>
                 <summary>
-                    <h3>Warp PRO
+                    <h3><span data-i18n="warpPro">وارپ حرفه‌ای</span>
                         <a href="https://bia-pain-bache.github.io/BPB-Worker-Panel/configuration/warp-pro/"
                             target="_blank" title="Help">
                             <span class="material-symbols-rounded">info</span>
@@ -520,7 +521,7 @@
             </details>
             <details>
                 <summary>
-                    <h3>Routing Rules
+                    <h3><span data-i18n="routingRules">قوانین مسیریابی</span>
                         <a href="https://bia-pain-bache.github.io/BPB-Worker-Panel/configuration/routing-rules/"
                             target="_blank" title="Help">
                             <span class="material-symbols-rounded">info</span>
@@ -673,7 +674,7 @@
             </details>
             <div id="apply" class="form-control apply">
                 <button type="submit" id="applyButton" class="button disabled apply-settings" form="configForm">
-                    Apply <span class="material-symbols-rounded">check_circle</span>
+                    <span data-i18n="apply">اعمال</span> <span class="material-symbols-rounded">check_circle</span>
                 </button>
                 <button type="button" class="panel-settings" title="Reset panel settings to default"
                     onclick="resetSettings()">
@@ -691,10 +692,10 @@
         </form>
     </div>
     <div class="form-container container">
-        <h2><span class="material-symbols-rounded">share</span> Subscriptions</h2>
+        <h2><span class="material-symbols-rounded">share</span> <span data-i18n="subscriptions">اشتراک‌ها</span></h2>
         <details>
             <summary>
-                <h3>Normal
+                <h3><span data-i18n="normal">عادی</span>
                     <a href="https://bia-pain-bache.github.io/BPB-Worker-Panel/usage/normal/" target="_blank"
                         title="Help">
                         <span class="material-symbols-rounded">info</span>
@@ -804,7 +805,7 @@
         </details>
         <details>
             <summary>
-                <h3>Fragment
+                <h3><span data-i18n="fragment">فرگمنت</span>
                     <a href="https://bia-pain-bache.github.io/BPB-Worker-Panel/usage/fragment/" target="_blank"
                         title="Help">
                         <span class="material-symbols-rounded">info</span>
@@ -879,7 +880,7 @@
         <details class="details">
             <summary>
                 <h3>
-                    Raw (without settings)
+                    <span data-i18n="rawNoSettings">خام (بدون تنظیمات)</span>
                     <a href="https://bia-pain-bache.github.io/BPB-Worker-Panel/usage/raw/" target="_blank" title="Help">
                         <span class="material-symbols-rounded">info</span>
                     </a>
@@ -965,7 +966,7 @@
         </details>
         <details>
             <summary>
-                <h3>Warp
+                <h3><span data-i18n="warpGeneral">وارپ</span>
                     <a href="https://bia-pain-bache.github.io/BPB-Worker-Panel/usage/warp/" target="_blank"
                         title="Help">
                         <span class="material-symbols-rounded">info</span>
@@ -1081,7 +1082,7 @@
         </details>
         <details>
             <summary>
-                <h3>Warp PRO
+                <h3><span data-i18n="warpPro">وارپ حرفه‌ای</span>
                     <a href="https://bia-pain-bache.github.io/BPB-Worker-Panel/usage/warp-pro/" target="_blank"
                         title="Help">
                         <span class="material-symbols-rounded">info</span>
@@ -1202,7 +1203,7 @@
         </details>
     </div>
     <div class="form-container container">
-        <h2><span class="material-symbols-rounded">dns</span> DNS over HTTPS</h2>
+        <h2><span class="material-symbols-rounded">dns</span> <span data-i18n="dohTitle">DNS بر بستر HTTPS</span></h2>
         <div class="value-container">
             <div class="output-container">
                 <span id="doh" class="output"></span>
@@ -1218,7 +1219,7 @@
             <div class="modal-content">
                 <span class="close" id="closeResetPass" onclick="closeResetPass()">&times;</span>
                 <form id="passwordChangeForm" onsubmit="resetPassword(event)">
-                    <h2>Change Password</h2>
+                    <h2><span data-i18n="changePassword">تغییر رمز عبور</span></h2>
                     <div class="section">
                         <div class="form-control">
                             <label for="newPassword">New Password</label>
@@ -1254,7 +1255,7 @@
             </div>
         </div>
         <div class="header-container">
-            <h2><span class="material-symbols-rounded">fingerprint</span> My IP</h2>
+            <h2><span class="material-symbols-rounded">fingerprint</span> <span data-i18n="myIP">آی‌پی من</span></h2>
             <button type="button" id="refresh-geo-location" class="refresh-geo-location" onclick="fetchIPInfo()">
                 <i class="fa fa-refresh fa-2x refresh-my-ip" aria-hidden="true"></i>
             </button>

@@ -1375,3 +1375,72 @@ function renderUdpNoiseBlock(xrayUdpNoises) {
         setTimeout(() => { statusEl.textContent = '✅ اعمال شد.'; }, 1500);
     });
 })();
+
+// ===== Language switcher (i18n) =====
+(function initI18n() {
+    const translations = {
+        fa: {
+            panelTitle: 'پنل PbP',
+            quickSettings: 'تنظیمات سریع',
+            settings: 'تنظیمات',
+            common: 'عمومی',
+            vlessTrojan: 'VLESS - Trojan',
+            fragment: 'فرگمنت Xray',
+            externalRaw: 'کانفیگ خام خارجی',
+            warpGeneral: 'وارپ عمومی',
+            warpPro: 'وارپ حرفه‌ای',
+            routingRules: 'قوانین مسیریابی',
+            subscriptions: 'اشتراک‌ها',
+            normal: 'عادی',
+            rawNoSettings: 'خام (بدون تنظیمات)',
+            dohTitle: 'DNS بر بستر HTTPS',
+            changePassword: 'تغییر رمز عبور',
+            myIP: 'آی‌پی من',
+            apply: 'اعمال',
+        },
+        en: {
+            panelTitle: 'PbP Panel',
+            quickSettings: 'Quick Settings',
+            settings: 'Settings',
+            common: 'Common',
+            vlessTrojan: 'VLESS - Trojan',
+            fragment: 'Xray Fragment',
+            externalRaw: 'External Raw Configs',
+            warpGeneral: 'Warp General',
+            warpPro: 'Warp PRO',
+            routingRules: 'Routing Rules',
+            subscriptions: 'Subscriptions',
+            normal: 'Normal',
+            rawNoSettings: 'Raw (without settings)',
+            dohTitle: 'DNS over HTTPS',
+            changePassword: 'Change Password',
+            myIP: 'My IP',
+            apply: 'Apply',
+        }
+    };
+
+    function applyLang(lang) {
+        const dict = translations[lang] || translations.fa;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (dict[key]) el.textContent = dict[key];
+        });
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'fa' ? 'rtl' : 'ltr';
+        document.body.classList.toggle('lang-en', lang === 'en');
+        const btn = document.getElementById('langToggle');
+        if (btn) btn.textContent = lang === 'fa' ? 'EN' : 'FA';
+        localStorage.setItem('panelLang', lang);
+    }
+
+    const savedLang = localStorage.getItem('panelLang') || 'fa';
+    applyLang(savedLang);
+
+    const toggleBtn = document.getElementById('langToggle');
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+            const current = document.documentElement.lang === 'fa' ? 'en' : 'fa';
+            applyLang(current);
+        });
+    }
+})();
