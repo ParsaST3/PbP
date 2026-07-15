@@ -1,11 +1,9 @@
 <h1 align="center">PbP Panel</h1>
 
-### 🌏 Readme in [Farsi](README_fa.md)
+### 馃審 Readme in [Farsi](README_fa.md)
 
-<p align="center">
-  <img src="docs/assets/images/panel-overview.jpg">
-</p>
-<br>
+![PbP1](PbP1.png)
+![PbP2](PbP2.png)
 
 ## Introduction
 
@@ -14,12 +12,12 @@ This project is aimed to provide a user panel to access FREE, SECURE and PRIVATE
 - **Workers** deployment
 - **Pages** deployment
 
-🌟 If you found **PbP Panel** valuable, Your donations make all the difference 🌟
+馃専 If you found **PbP Panel** valuable, Your donations make all the difference 馃専
 
-### USDT (BEP20)
+###  Tron (TRX)
 
 ```text
-0xbdf15d41C56f861f25b2b11C835bd45dfD5b792F
+TQsuidj7AB3bKonbas3tpePu3gNzxhCmva
 ```
 
 ## Features
@@ -78,14 +76,3 @@ This project is aimed to provide a user panel to access FREE, SECURE and PRIVATE
 
 ---
 
-## Stargazers Over Time
-
-[![Stargazers Over Time](https://starchart.cc/bia-pain-bache/PbP-Worker-Panel.svg?variant=adaptive)](https://starchart.cc/bia-pain-bache/PbP-Worker-Panel)
-
----
-
-### Special Thanks
-
-- VLESS, Trojan [Cloudflare-workers/pages proxy script](https://github.com/yonggekkk/Cloudflare-workers-pages-vless) created by [yonggekkk](https://github.com/yonggekkk)
-- CF-vless code author [3Kmfi6HP](https://github.com/3Kmfi6HP/EDtunnel)
-- CF preferred IP program author [badafans](https://github.com/badafans/Cloudflare-IP-SpeedTest), [XIU2](https://github.com/XIU2/CloudflareSpeedTest)
